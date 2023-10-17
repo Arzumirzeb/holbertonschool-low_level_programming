@@ -1,8 +1,10 @@
 #include "main.h"
 /**
- * print_sing - Entry point
+ * print_sign - check lowercase.
+ *
  * @n: variable
- * Return: Always 0 (Success)
+ *
+ * Return: if positive 1, zero 0, negative -1.
  */
 int print_sign(int n)
 {
