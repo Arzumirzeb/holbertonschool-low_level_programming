@@ -15,7 +15,7 @@ int main(void)
 		{
 			for (f = i; f <= 57; f++)
 			{
-				for (k = j + 1; k <= 57; k++)
+				for (k = 48; k <= 57; k++)
 				{
 					if ((i < f || i <= f) && j < k)
 					{
@@ -24,11 +24,11 @@ int main(void)
 					putchar(' ');
 					putchar(f);
 					putchar(k);
-					}
 					if (i < 57 || j < 56 || f < 57 || k < 57)
 					{
 						putchar(',');
 						putchar(' ');
+					}
 					}
 				}
 			}
