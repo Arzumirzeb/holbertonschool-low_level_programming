@@ -17,7 +17,10 @@ int main(void)
 			{
 				for (k = 48; k <= 57; k++)
 				{
-					if ((i < f || i <= f) && j < k)
+					if (f == i && k <= j)
+					{
+					continue;
+					}
 					{
 					putchar(i);
 					putchar(j);
