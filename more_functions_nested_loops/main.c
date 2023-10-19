@@ -1,7 +1,6 @@
 #include "main.h"
-#include "_putchar.c"
 #include <stdio.h>
-#include "0-isupper.c"
+
 /**
  * main - check the code.
  *
@@ -11,9 +10,9 @@ int main(void)
 {
 	char c;
 
-	c = 'A';
-	printf("%c: %d\n", c, _isupper(c));
+	c = '0';
+	printf("%c: %d\n", c, _isdigit(c));
 	c = 'a';
-	printf("%c: %d\n", c, _isupper(c));
+	printf("%c: %d\n", c, _isdigit(c));
 	return (0);
 }
