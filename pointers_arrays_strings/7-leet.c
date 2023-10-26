@@ -8,21 +8,20 @@
  */
 char *leet(char *a)
 {
-	int i = 0, j = 0;
+	int i = 0, j;
 	char num[] = "43071";
 	char b[] = "aeotl";
 	char B[] = "AEOTL";
 
-	for (; *(a + i) != 0; i++)
+	for (; *(a + i) != '\0'; i++)
 	{
-		for (; j < 5; j++)
+		for (j = 0; j < 5; j++)
 		{
-			if (*(a + i) == *(b + j) || *(a + i) == *(B + i))
+			if (*(a + i) == *(b + j) || *(a + i) == *(B + j))
 			{
 				*(a + i) = *(num + j);
 			}
 		}
 	}
 	return (a);
-
 }
