@@ -29,7 +29,7 @@ int _prime_number(int x, int y)
 	{
 		return (0);
 	}
-	if (x / 2 > y)
+	if (x / 2 < y)
 	{
 		return (1);
 	}
