@@ -2,8 +2,8 @@
 #include <stdio.h>
 #include <stdarg.h>
 /**
- * print_all - check the code
- * @char : char
+ * print_all - print arguments
+ * @format : format
  *
  * Return: Always 0.
  */
