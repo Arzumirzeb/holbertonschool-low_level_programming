@@ -36,8 +36,8 @@ dlistint_t *insert_dnodeint_at_index(dlistint_t **h, unsigned int idx, int n)
 		}
 	while (idx - 1 > count && temp)
 	{
-			temp = temp->next;
-			count++;
+		temp = temp->next;
+		count++;
 	}
 	if (temp)
 		{
