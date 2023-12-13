@@ -15,9 +15,7 @@ void copy_file(const char *file1, const char *file2)
 
 	from = open(file1, O_RDONLY);
 	if (file1 == NULL || from == -1)
-	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
-	}
 	to = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (to == -1)
 	{
