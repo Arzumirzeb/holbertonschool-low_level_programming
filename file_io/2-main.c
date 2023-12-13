@@ -1,29 +1,22 @@
-#include <unistd.h>
-#include <fcntl.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include "main.h"
 
 /**
- * append_text_to_file - check the code
- * @filename: filename
- * @text_content: text
+ * main - check the code
+ *
  * Return: Always 0.
  */
-int append_text_to_file(const char *filename, char *text_content)
+int main(int ac, char **av)
 {
-	int fd, w;
+    int res;
 
-	if (!filename)
-		return (-1);
-	fd = open(fillename, O_RDONLY | O_CREAT | O_APPEND);
-	if (!text_content)
-	{
-		close(fd);
-		return (1);
-	w = (fd, text_content, strlen(text_content));
-	if (fd == -1 || w == -1)
-		return (-1);
-	close(fd);
-	return (1);
+    if (ac != 3)
+    {
+        dprintf(2, "Usage: %s filename text\n", av[0]);
+        exit(1);
+    }
+    res = append_text_to_file(av[1], av[2]);
+    printf("-> %i)\n", res);
+    return (0);
 }
