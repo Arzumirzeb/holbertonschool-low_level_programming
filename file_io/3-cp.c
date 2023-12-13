@@ -34,12 +34,12 @@ void copy_file(const char *file1, const char *file2)
 	}
 	if (close(from) == -1)
 	{
-	dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE%d\n", from);
+	dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", from);
 		exit(100);
 	}
 	if (close(to) == -1)
 	{
-	dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE%d\n", to);
+	dprintf(STDERR_FILENO, "Error: Can't close fd FD_VALUE %d\n", to);
 		exit(100);
 	}
 }
