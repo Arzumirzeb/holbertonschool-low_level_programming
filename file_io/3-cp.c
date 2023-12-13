@@ -25,7 +25,7 @@ void copy_file(const char *file1, const char *file2)
 		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file2);
 		exit(99);
 	}
-	r = read(from, buf, 1024)
+	r = read(from, buf, 1024);
 	while (r > 0)
 	{
 		w = write(to, buf, r);
