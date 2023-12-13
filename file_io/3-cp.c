@@ -47,7 +47,6 @@ void copy_file(const char *file1, const char *file2)
 	}
 	close(from);
 	close(to);
-	return (0);
 }
 /**
  * main - check the code
