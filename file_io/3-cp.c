@@ -16,28 +16,28 @@ void copy_file(const char *file1, const char *file2)
 	from = open(file1, O_RDONLY);
 	if (file1 == NULL || from == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 	}
 	to = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
-		exit(99);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
 	}
 	r = read(from, buf, 1024);
 	if (r == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
-		exit(98);
+		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 	}
 	while (r > 0)
 	{
 		w = write(to, buf, r);
 		if (w == -1)
 		{
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
-			exit(99);
+			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2), exit(99);
+		}
+		if (r == -1)
+		{
+			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1), exit(98);
 		}
 	}
 	if (close(from) == -1)
