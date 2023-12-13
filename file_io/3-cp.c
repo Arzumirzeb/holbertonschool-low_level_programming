@@ -39,12 +39,6 @@ void copy_file(const char *file1, const char *file2)
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
 			exit(99);
 		}
-		r = read(from, buf, 1024);
-		if (r == -1)
-		{
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
-			exit(98);
-		}
 	}
 	if (close(from) == -1)
 	{
