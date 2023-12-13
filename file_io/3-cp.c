@@ -1,6 +1,6 @@
 #include <unistd.h>
 #include <fcntl.h>
-#include<stdio.h>
+#include <stdio.h>
 #include <stdlib.h>
 /**
  * copy_file - copy from file1 to file2
@@ -26,7 +26,7 @@ void copy_file(const char *file1, const char *file2)
 	{
 		if (r != w || to == -1)
 		{
-		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file2);
+		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file2);
 		exit(99);
 		}
 	}
