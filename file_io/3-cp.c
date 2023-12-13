@@ -14,7 +14,7 @@ void copy_file(const char *file1, const char *file2)
 	char buf[1024];
 
 	from = open(file1, O_RDONLY);
-	if (from == -1)
+	if (file1 == NULL || from == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file1);
 		exit(98);
@@ -45,8 +45,6 @@ void copy_file(const char *file1, const char *file2)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to);
 		exit(100);
 	}
-	close(from);
-	close(to);
 }
 /**
  * main - check the code
