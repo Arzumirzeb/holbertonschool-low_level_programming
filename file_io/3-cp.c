@@ -45,6 +45,9 @@ void copy_file(const char *file1, const char *file2)
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", to);
 		exit(100);
 	}
+	close(from);
+	close(to);
+	return (0);
 }
 /**
  * main - check the code
