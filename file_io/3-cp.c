@@ -22,7 +22,7 @@ void copy_file(const char *file1, const char *file2)
 	to = open(file2, O_CREAT | O_WRONLY | O_TRUNC, 0664);
 	if (to == -1)
 	{
-		dprintf(STDERR_FILENO, "Error: Can't write to file %s\n", file2);
+		dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file2);
 		exit(99);
 	}
 	r = read(from, buf, 1024);
