@@ -27,7 +27,7 @@ int hash_table_set(hash_table_t *ht, const char *key, const char *value)
 			ht->array[i]->value = strdup(value);
 			return (1);
 		}
-		ht->array[i] = ht->[i]->next;
+		ht->array[i] = ht->array[i]->next;
 	}
 	new = malloc(sizeof(hash_node_t));
 	if (!new)
