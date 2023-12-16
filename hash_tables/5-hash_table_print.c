@@ -9,14 +9,14 @@
  */
 void hash_table_print(const hash_table_t *ht)
 {
-	unsigned long int index;
+	unsigned long int index = 0;
 	hash_node_t *temp;
 	char *v = "";
 
 	if (!ht)
 		return;
 	putchar('{');
-	for (index = 0; index < ht->size; index++)
+	while (index < ht->size)
 	{
 		temp = ht->array[index];
 		while (temp)
@@ -25,6 +25,7 @@ void hash_table_print(const hash_table_t *ht)
 			v = ",";
 			temp = temp->next;
 		}
+		index++;
 	}
 	puts("}");
 }
