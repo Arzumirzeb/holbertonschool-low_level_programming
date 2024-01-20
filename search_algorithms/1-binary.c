@@ -2,6 +2,7 @@
 
 /**
 * print_array - print array of integers
+* @array: array
 * @low: low index
 * @high: high index
 */
